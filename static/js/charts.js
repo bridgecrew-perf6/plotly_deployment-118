@@ -119,6 +119,7 @@ function init() {
            colorscale: "Portland" 
          }
       }];
+      
         // 2. Create the layout for the bubble chart.
       var bubbleLayout = {
           title: "Bacteria Cultures Per Sample",
@@ -140,6 +141,7 @@ function init() {
     // 3. Create a variable that converts the washing frequency to a floating point number.
       var wfreqs = gaugeResult.wfreq;
       console.log(wfreqs)
+
     // 4. Create the trace object for the gauge chart.
       var gaugeData = [{
         value: wfreqs,
@@ -159,10 +161,12 @@ function init() {
         }
       }];
   
+
     // 5. Create the layout for the gauge chart.
       var gaugeLayout = {
         automargin: true
       };
+      
       
     // 6. Create the layout for the gauge chart
       Plotly.newPlot("gauge", gaugeData, gaugeLayout)
